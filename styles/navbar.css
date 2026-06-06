@@ -1,0 +1,144 @@
+/* ════════════════════════════════════════════════════
+   CELERA MANILA — Navbar Component
+════════════════════════════════════════════════════ */
+
+/* ── Navbar Shell ─────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition:
+    background-color var(--t-base) ease,
+    backdrop-filter  var(--t-base) ease;
+}
+.navbar.is-scrolled {
+  background-color: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ── Inner Layout ─────────────────────────────────── */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem var(--container-px);
+}
+@media (min-width: 1024px) {
+  .navbar__inner {
+    padding: 1.25rem var(--container-px-lg);
+  }
+}
+
+/* ── Brand ────────────────────────────────────────── */
+.navbar__brand {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* ── Desktop Links ────────────────────────────────── */
+.navbar__links {
+  display: none;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .navbar__links {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding-block: 0.25rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--t-base) ease;
+}
+.nav-link:hover { color: var(--text-primary); }
+
+/* ── Hamburger ────────────────────────────────────── */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+@media (min-width: 1024px) {
+  .hamburger { display: none; }
+}
+
+.hamburger__bar {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition:
+    transform var(--t-base) ease,
+    opacity  var(--t-base) ease;
+}
+.hamburger.is-open .hamburger__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.is-open .hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open .hamburger__bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ── Mobile Menu Overlay ──────────────────────────── */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-base) ease;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--t-base) ease;
+}
+.mobile-nav-link:hover { color: #fff; }

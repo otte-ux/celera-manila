@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-06T13:45:25.528Z",
+  "projectRoot": "C:\\Users\\otte\\Downloads\\celera-manila",
+  "structure": {
+    "hasPackageJson": false,
+    "hasTsConfig": false,
+    "hasClaudeConfig": false,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1780753525529
+}
