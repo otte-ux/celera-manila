@@ -1,0 +1,144 @@
+/* ════════════════════════════════════════════════════
+   CELERA MANILA — Reservation Section
+════════════════════════════════════════════════════ */
+
+.section--reserve {
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Subtle dot texture overlay ───────────────────── */
+.reserve__texture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 1px,
+    transparent 0
+  );
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+/* ── Form ─────────────────────────────────────────── */
+.reserve__form {
+  max-width: 32rem;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.form-row {
+  position: relative;
+}
+
+/* ── Inputs ───────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color var(--t-base) ease;
+}
+.form-input::placeholder {
+  color: var(--text-secondary);
+}
+.form-input:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
+.form-input.is-invalid {
+  border-bottom-color: rgba(255, 80, 80, 0.7);
+}
+
+/* Date picker icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}
+
+/* Select */
+select.form-input {
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+select.form-input:valid {
+  color: var(--text-primary);
+}
+select.form-input option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ── Submit Button ────────────────────────────────── */
+.reserve__btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--gold);
+  color: #000;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  min-height: 52px;
+  transition: background-color var(--t-base) ease;
+}
+.reserve__btn:hover,
+.reserve__btn:focus-visible {
+  background-color: var(--gold-hover);
+  outline: none;
+}
+.reserve__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Info Columns ─────────────────────────────────── */
+.reserve__info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  text-align: center;
+  max-width: 56rem;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .reserve__info {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.info-item__body {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.info-item__body a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--t-base) ease;
+}
+.info-item__body a:hover {
+  color: var(--text-primary);
+}

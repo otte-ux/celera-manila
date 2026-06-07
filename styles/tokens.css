@@ -1,0 +1,40 @@
+/* ════════════════════════════════════════════════════
+   CELERA MANILA — Design Tokens
+   Single source of truth for all brand values.
+   Do not modify without brand approval.
+════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Backgrounds ──────────────────────────────── */
+  --bg-primary:   #1E1E1E;
+  --bg-secondary: #3E3E3E;
+  --bg-black:     #000000;
+
+  /* ── Text ─────────────────────────────────────── */
+  --text-primary:   rgba(255, 255, 255, 0.85);
+  --text-secondary: rgba(255, 255, 255, 0.53);
+
+  /* ── Accent ───────────────────────────────────── */
+  --gold:       #C9A96E;
+  --gold-hover: #B8926A;
+
+  /* ── Typography ───────────────────────────────── */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Motion ───────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast:   200ms;
+  --t-base:   300ms;
+  --t-slow:   500ms;
+  --t-reveal: 800ms;
+
+  /* ── Layout ───────────────────────────────────── */
+  --container-max:    80rem;
+  --container-px:     1.5rem;
+  --container-px-lg:  3rem;
+  --section-py:       6rem;
+  --section-py-lg:    8rem;
+
+}

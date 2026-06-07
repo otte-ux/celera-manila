@@ -1,0 +1,230 @@
+/* ════════════════════════════════════════════════════
+   CELERA MANILA — Global Styles
+   Base reset, typography, shared utilities.
+════════════════════════════════════════════════════ */
+
+/* ── Reset ────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul { list-style: none; }
+
+address { font-style: normal; }
+
+/* ── Skip Link ────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -200%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  background: var(--gold);
+  color: #000;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top var(--t-base) ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ── Focus Visible ────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ── Screen Reader Only ───────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Container ────────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--container-px-lg);
+  }
+}
+
+/* ── Section Base ─────────────────────────────────── */
+.section {
+  padding-block: var(--section-py);
+}
+@media (min-width: 1024px) {
+  .section {
+    padding-block: var(--section-py-lg);
+  }
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section__sub {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+/* ── Eyebrow Label ────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Ghost Button ─────────────────────────────────── */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  min-height: 44px;
+  cursor: pointer;
+  transition:
+    background-color var(--t-base) ease,
+    color var(--t-base) ease;
+}
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  background-color: var(--gold);
+  color: #000;
+  outline: none;
+}
+
+/* ── Gold Underline Link ──────────────────────────── */
+.link-gold {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 0.125rem;
+  transition: opacity var(--t-base) ease;
+}
+.link-gold:hover { opacity: 0.7; }
+
+/* ── Image Zoom on Hover ──────────────────────────── */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform var(--t-slow) ease;
+  will-change: transform;
+}
+.img-zoom:hover img {
+  transform: scale(1.03);
+}
+
+/* ── Scroll Reveal ────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity  var(--t-reveal) var(--ease-out),
+    transform var(--t-reveal) var(--ease-out);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.about__copy--delayed       { transition-delay: 0.15s; }
+.dish--delayed-1            { transition-delay: 0.10s; }
+.dish--delayed-2            { transition-delay: 0.20s; }
+.press__pullquote--delayed  { transition-delay: 0.15s; }
+.reserve__form--delayed     { transition-delay: 0.15s; }
+.reserve__info--delayed     { transition-delay: 0.25s; }
+
+/* ── Reduced Motion ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .img-zoom img {
+    transition: none;
+  }
+  .hero-in {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

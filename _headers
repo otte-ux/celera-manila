@@ -1,0 +1,23 @@
+## Cloudflare Pages — HTTP Response Headers
+## https://developers.cloudflare.com/pages/platform/headers/
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+## Long-lived cache for fingerprinted/immutable assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+## Short-lived cache for stylesheets + scripts (re-deploy busts this)
+/styles/*
+  Cache-Control: public, max-age=86400
+
+/scripts/*
+  Cache-Control: public, max-age=86400
+
+## HTML: always revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

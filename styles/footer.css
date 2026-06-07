@@ -1,0 +1,87 @@
+/* ════════════════════════════════════════════════════
+   CELERA MANILA — Footer
+════════════════════════════════════════════════════ */
+
+.site-footer {
+  background-color: var(--bg-black);
+  padding-block: 3rem;
+  padding-inline: var(--container-px);
+}
+@media (min-width: 1024px) {
+  .site-footer {
+    padding-inline: var(--container-px-lg);
+  }
+}
+
+/* ── Columns ──────────────────────────────────────── */
+.footer__cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  text-align: center;
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .footer__cols {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+    align-items: start;
+  }
+}
+
+/* ── Text ─────────────────────────────────────────── */
+.footer__address,
+.footer__text {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+/* ── Links ────────────────────────────────────────── */
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .footer__links {
+    align-items: flex-start;
+  }
+}
+
+.footer__link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--t-base) ease;
+}
+.footer__link:hover {
+  color: var(--text-primary);
+}
+
+/* ── Copyright Bar ────────────────────────────────── */
+.footer__bottom {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+.footer__bottom p {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+}

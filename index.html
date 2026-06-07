@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CELERA — Cuisine d'Auteur. A distinctive fine dining experience in Makati City, Manila.">
+  <meta name="theme-color" content="#1E1E1E">
+  <meta property="og:title" content="CELERA Manila — Cuisine d'Auteur">
+  <meta property="og:description" content="A distinctive fine dining experience in Makati City, Manila.">
+  <meta property="og:type" content="website">
+  <title>CELERA — Cuisine d'Auteur · Manila</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: Cormorant Garamond + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles — loaded in cascade order -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/gallery.css">
+  <link rel="stylesheet" href="styles/press.css">
+  <link rel="stylesheet" href="styles/reservation.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+  <!-- SKIP LINK (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ══════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="navbar__inner" aria-label="Main navigation">
+
+      <a href="#hero" class="navbar__brand">Celera</a>
+
+      <ul class="navbar__links" role="list">
+        <li><a href="#hero"    class="nav-link">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#menu"    class="nav-link">Menu</a></li>
+        <li><a href="#reserve" class="nav-link">Reserve</a></li>
+        <li><a href="#press"   class="nav-link">Press</a></li>
+      </ul>
+
+      <button class="hamburger"
+              id="hamburger"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span class="hamburger__bar" id="bar1"></span>
+        <span class="hamburger__bar" id="bar2"></span>
+        <span class="hamburger__bar" id="bar3"></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+    <a href="#hero"    class="mobile-nav-link">Home</a>
+    <a href="#about"   class="mobile-nav-link">About</a>
+    <a href="#menu"    class="mobile-nav-link">Menu</a>
+    <a href="#reserve" class="mobile-nav-link">Reserve</a>
+    <a href="#press"   class="mobile-nav-link">Press</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
+  <section id="hero" class="hero" data-screen-label="Hero">
+    <div class="hero__bg">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80"
+        alt="Elegant fine dining ambiance at Celera Manila"
+        class="hero__img"
+        id="heroImg"
+        fetchpriority="high">
+      <div class="hero__overlay" aria-hidden="true"></div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title hero-in hero-in--1">Celera</h1>
+      <p  class="hero__tagline hero-in hero-in--2">Cuisine d'Auteur · Manila</p>
+      <div class="hero-in hero-in--3">
+        <a href="#reserve" class="btn-ghost">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ABOUT / BRAND STORY ─────────────────────── -->
+    <section id="about" class="section section--about" data-screen-label="About">
+      <div class="container">
+        <div class="about__grid">
+
+          <figure class="about__fig reveal img-zoom">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80"
+              alt="Chef plating a dish with precision and artistry at Celera"
+              loading="lazy">
+          </figure>
+
+          <div class="about__copy reveal about__copy--delayed">
+            <p class="eyebrow">Our Story</p>
+            <h2 class="about__heading">Worldly but Welcoming</h2>
+            <p class="about__body">
+              A play on <em>selera</em>, the Malay word for 'appetite,' CELERA layers and
+              refines flavors accumulated over two decades of Asian cooking, culminating
+              in a cuisine d'auteur. Worldly but welcoming, CELERA seeks to create a
+              distinctive fine dining experience in Manila.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU ────────────────────────────────────── -->
+    <section id="menu" class="section section--menu" data-screen-label="Menu">
+      <div class="container">
+
+        <header class="section__header reveal">
+          <h2 class="section__title">The Menu</h2>
+          <p class="section__sub">Seasonal Highlights</p>
+        </header>
+
+        <div class="menu__grid">
+          <article class="dish reveal">
+            <div class="dish__img-wrap img-zoom">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80"
+                alt="Smoked Duck Breast with black garlic, calamansi gel, and nasturtium"
+                loading="lazy">
+            </div>
+            <h3 class="dish__name">Smoked Duck Breast</h3>
+            <p class="dish__desc">Black garlic, calamansi gel, nasturtium, charred leek ash</p>
+          </article>
+
+          <article class="dish reveal dish--delayed-1">
+            <div class="dish__img-wrap img-zoom">
+              <img
+                src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
+                alt="Lapu-Lapu Crudo with green mango, coconut dashi, and finger lime"
+                loading="lazy">
+            </div>
+            <h3 class="dish__name">Lapu-Lapu Crudo</h3>
+            <p class="dish__desc">Dayboat catch, green mango, coconut dashi, finger lime</p>
+          </article>
+
+          <article class="dish reveal dish--delayed-2">
+            <div class="dish__img-wrap img-zoom">
+              <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80"
+                alt="Wagyu Sinigang with A5 short rib, tamarind consommé, and radish"
+                loading="lazy">
+            </div>
+            <h3 class="dish__name">Wagyu Sinigang</h3>
+            <p class="dish__desc">A5 short rib, tamarind consommé, radish, water spinach oil</p>
+          </article>
+        </div>
+
+        <div class="menu__cta reveal">
+          <a href="#" class="link-gold">View Full Menu</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY / EXPERIENCE ────────────────────── -->
+    <section id="experience" class="section--gallery" data-screen-label="Experience">
+      <div class="gallery">
+
+        <div class="gallery__cell gallery__cell--wide img-zoom">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80"
+            alt="The Celera dining room — intimate, warm, candlelit"
+            loading="lazy">
+          <div class="gallery__quote-wrap" aria-hidden="true">
+            <p class="gallery__quote">
+              "Every dish tells the story of a journey through Asia's finest kitchens."
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery__cell img-zoom">
+          <img
+            src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80"
+            alt="Sommelier pouring wine at tableside"
+            loading="lazy">
+        </div>
+
+        <div class="gallery__cell img-zoom">
+          <img
+            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80"
+            alt="Chef's hands assembling a dish"
+            loading="lazy">
+        </div>
+
+        <div class="gallery__cell gallery__cell--wide img-zoom">
+          <img
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80"
+            alt="Candlelit table setting at Celera Manila"
+            loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRESS ───────────────────────────────────── -->
+    <section id="press" class="section section--press" data-screen-label="Press">
+      <div class="container">
+
+        <header class="section__header reveal">
+          <h2 class="section__title">Press</h2>
+        </header>
+
+        <div class="press__logos reveal">
+          <span class="press__logo">Manila Times</span>
+          <span class="press__logo">Tatler</span>
+          <span class="press__logo">Esquire PH</span>
+          <span class="press__logo">Robb Report</span>
+        </div>
+
+        <div class="press__pullquote reveal press__pullquote--delayed">
+          <div class="press__rule" aria-hidden="true"></div>
+          <blockquote class="press__quote">
+            "A revelation of flavors — the most exciting table in Manila right now."
+          </blockquote>
+          <cite class="press__attribution">— Manila Dining Review</cite>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESERVATION ─────────────────────────────── -->
+    <section id="reserve" class="section section--reserve" data-screen-label="Reservation">
+      <div class="reserve__texture" aria-hidden="true"></div>
+      <div class="container">
+
+        <header class="section__header reveal">
+          <h2 class="section__title">Reserve Your Table</h2>
+          <p class="section__sub">Join us for an evening of layered flavors and quiet luxury.</p>
+        </header>
+
+        <form class="reserve__form reveal reserve__form--delayed"
+              id="reservationForm"
+              novalidate>
+          <div class="form-row">
+            <label for="name" class="sr-only">Full Name</label>
+            <input type="text"  id="name"  name="name"  placeholder="Name"  class="form-input" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email" class="form-input" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="date" class="sr-only">Preferred Date</label>
+            <input type="date"  id="date"  name="date"                      class="form-input" required>
+          </div>
+          <div class="form-row">
+            <label for="party" class="sr-only">Party Size</label>
+            <select id="party" name="party" class="form-input" required>
+              <option value="" disabled selected>Party Size</option>
+              <option value="2">2 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="8">8 Guests</option>
+            </select>
+          </div>
+          <button type="submit" class="reserve__btn" id="submitBtn">
+            Request Reservation
+          </button>
+        </form>
+
+        <div class="reserve__info reveal reserve__info--delayed">
+          <div class="info-item">
+            <p class="eyebrow">Location</p>
+            <p class="info-item__body">
+              3F Comuna, 238 Pablo Ocampo Sr. Ext.,<br>Makati City
+            </p>
+          </div>
+          <div class="info-item">
+            <p class="eyebrow">Hours</p>
+            <p class="info-item__body">
+              Tuesday — Saturday<br>6:00 p.m. — 11:00 p.m.
+            </p>
+          </div>
+          <div class="info-item">
+            <p class="eyebrow">Contact</p>
+            <p class="info-item__body">
+              <a href="mailto:reservations@restaurantcelera.com">reservations@restaurantcelera.com</a><br>
+              <a href="https://instagram.com/restaurantcelera" target="_blank" rel="noopener noreferrer">@restaurantcelera</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer" data-screen-label="Footer">
+    <div class="footer__cols">
+      <div class="footer__col">
+        <p class="eyebrow">Address</p>
+        <address class="footer__address">
+          3F Comuna<br>
+          238 Pablo Ocampo Sr. Ext.<br>
+          Makati City, Philippines
+        </address>
+      </div>
+      <div class="footer__col">
+        <p class="eyebrow">Hours</p>
+        <p class="footer__text">
+          Tuesday — Saturday<br>
+          6:00 p.m. — 11:00 p.m.
+        </p>
+      </div>
+      <div class="footer__col">
+        <p class="eyebrow">Contact</p>
+        <nav aria-label="Footer navigation">
+          <ul class="footer__links" role="list">
+            <li><a href="mailto:reservations@restaurantcelera.com" class="footer__link">Email</a></li>
+            <li><a href="https://instagram.com/restaurantcelera" target="_blank" rel="noopener noreferrer" class="footer__link">Instagram</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 CELERA</p>
+    </div>
+  </footer>
+
+  <!-- Scripts — defer, order matters -->
+  <script src="scripts/animations.js" defer></script>
+  <script src="scripts/navbar.js"     defer></script>
+  <script src="scripts/reservation.js" defer></script>
+  <script src="scripts/main.js"       defer></script>
+
+</body>
+</html>
